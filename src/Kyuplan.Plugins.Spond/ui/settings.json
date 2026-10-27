@@ -1,0 +1,75 @@
+{
+  "elements": [
+    {
+      "type": "field",
+      "id": "Email",
+      "label": "Spond email",
+      "labelDe": "Spond-E-Mail",
+      "input": "text",
+      "maxLength": 254
+    },
+    {
+      "type": "field",
+      "id": "PhoneNumber",
+      "label": "Spond phone number (instead of the email)",
+      "labelDe": "Spond-Telefonnummer (statt der E-Mail)",
+      "input": "text",
+      "maxLength": 50
+    },
+    {
+      "type": "field",
+      "id": "Password",
+      "label": "Spond password",
+      "labelDe": "Spond-Passwort",
+      "input": "password",
+      "hint": "Without a Spond login the planner has no data; you can add it later.",
+      "hintDe": "Ohne Spond-Zugang hat der Planer keine Daten; du kannst ihn später nachtragen.",
+      "maxLength": 500,
+      "together": {
+        "groups": [ [ "Email", "PhoneNumber" ], [ "Password" ] ],
+        "message": "A Spond login needs the email (or phone number) and the password.",
+        "messageDe": "Ein Spond-Zugang braucht die E-Mail (oder Telefonnummer) und das Passwort."
+      }
+    },
+    {
+      "type": "list",
+      "id": "Accounts",
+      "label": "Backup Spond accounts",
+      "labelDe": "Ersatz-Spond-Zugänge",
+      "hint": "Asked in this order when the first account yields nothing (Spond sometimes answers an account that sent too many requests with nothing at all). All accounts must see the same groups.",
+      "hintDe": "Werden in dieser Reihenfolge gefragt, wenn der erste Zugang nichts liefert (Spond antwortet auf einen Zugang, der zu viele Anfragen geschickt hat, manchmal mit nichts). Alle Zugänge müssen dieselben Gruppen sehen.",
+      "max": 10,
+      "elements": [
+        {
+          "type": "field",
+          "id": "Email",
+          "label": "Spond email",
+          "labelDe": "Spond-E-Mail",
+          "input": "text",
+          "maxLength": 254
+        },
+        {
+          "type": "field",
+          "id": "PhoneNumber",
+          "label": "Spond phone number (instead of the email)",
+          "labelDe": "Spond-Telefonnummer (statt der E-Mail)",
+          "input": "text",
+          "maxLength": 50
+        },
+        {
+          "type": "field",
+          "id": "Password",
+          "label": "Spond password",
+          "labelDe": "Spond-Passwort",
+          "input": "password",
+          "maxLength": 500,
+          "together": {
+            "groups": [ [ "Email", "PhoneNumber" ], [ "Password" ] ],
+            "message": "A backup Spond login needs the email (or phone number) and the password.",
+            "messageDe": "Ein Ersatz-Spond-Zugang braucht die E-Mail (oder Telefonnummer) und das Passwort."
+          }
+        }
+      ]
+    }
+  ]
+}

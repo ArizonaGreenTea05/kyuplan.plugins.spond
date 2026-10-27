@@ -1,0 +1,22 @@
+{
+  "id": "spond",
+  "name": "Spond",
+  "nameDe": "Spond",
+  "version": "1.0.0",
+  "description": "Reads the groups, members and events of the club from Spond.",
+  "descriptionDe": "Liest die Gruppen, Mitglieder und Termine des Vereins aus Spond.",
+  "author": "ArizonaGreenTea05",
+  "homepage": "https://github.com/ArizonaGreenTea05/kyuplan.plugins.spond",
+  "assembly": "Kyuplan.Plugins.Spond.dll",
+  "dataSources": [
+    {
+      "id": "spond",
+      "name": "Spond",
+      "nameDe": "Spond",
+      "description": "Groups, members and events are read from Spond.",
+      "descriptionDe": "Gruppen, Mitglieder und Termine werden aus Spond gelesen.",
+      "configSection": "Spond",
+      "settings": "ui/settings.json"
+    }
+  ]
+}
